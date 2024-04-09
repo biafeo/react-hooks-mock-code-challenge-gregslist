@@ -3,10 +3,12 @@ import Header from "./Header";
 import ListingsContainer from "./ListingsContainer";
 
 function App() {
+  const [submittedSearch, setSubmittedSearch] = useState("");
+
   return (
     <div className="app">
-      <Header />
-      <ListingsContainer />
+      <Header setSubmittedSearch={setSubmittedSearch} />
+      <ListingsContainer submittedSearch={submittedSearch} />
     </div>
   );
 }
